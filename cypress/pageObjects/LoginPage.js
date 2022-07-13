@@ -23,6 +23,15 @@ class LoginPage extends BasePage {
   static get userNameValidation(){
     return cy.get('.mat-menu-content > [aria-label="Go to user profile"] > span');
   }
+  static get ordersPaymentButton() {
+    return cy.get('button[aria-label="Show Orders and Payment Menu"]');
+  }
+  static get userAddresses() {
+    return cy.get('span').contains("My saved addresses");
+  }
+  static get userPayment() {
+    return cy.get('span').contains("My Payment Options");
+  }
 }
 
 export default LoginPage;

@@ -59,7 +59,7 @@ class SearchPage extends BasePage {
     return cy.get('[class="mat-option-text"]');
   }
   static get addToBasketButton(){
-    return cy.contains('Add to Basket');
+    return cy.get('button[aria-label="Add to Basket"]');
   }
   static get userBasket(){
     return cy.get('[class="mat-focus-indicator buttons mat-button mat-button-base ng-star-inserted"]');
@@ -71,7 +71,10 @@ class SearchPage extends BasePage {
     return cy.contains('Add New Address');
   }
   static get radioCheckBox(){
-    return cy.get('[id="mat-radio-40-input"]');
+    //return (cy.get('[class="mat-radio-inner-circle"]'));
+  }
+  static get continueButton(){
+    return cy.contains('Continue');
   }
 
 }
